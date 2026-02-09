@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { DataServiceService} from '../data-service.service';
+
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +14,9 @@ export class LoginComponent {
   username = '';
   password = '';
 
+   data = inject(DataServiceService).getData();
    
+
  
   
 }
